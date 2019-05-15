@@ -2,44 +2,69 @@
   display: none
   position: fixed 0
   z-index: 8
-  background: $colorBg
-  // display: flex
+  background: transparent
   flex-direction: column
   pointer-events: none
-  transform: translate3d(0,-100%,0)
-  transition: transform .3s $ease
+  color: white
+  transition: background .3s $ease
   &__wrapper
-    flex: 1 1 auto
+    flex: 0 0 auto
     display: flex
     flex-direction: column
-    padding: 50px 25px 20px
+    padding: 100px 0px 20px
+    background: #07456C
+    color: white
+    transform: translate3d(0,-100%,0)
+    transition: transform .3s $ease
   &__menu
-    margin-top: auto
-    padding: 20px 0
+    flex: 0 0 auto
+    padding: 20px 0 0
+    margin: 0
     list-style: none
     text-align: center
     li
       display: block
-      font-size: 36px
-      margin-bottom: 30px
+      font-size: 16px
+      font-weight: 500
+      text-transform: uppercase
       &:last-child
-        margin-bottom: 0
+        a
+          border-bottom: 0
     a
+      display: inline-block
+      width: 100%
+      padding: 17px 15px
+      border-bottom: 1px solid #0968A3
       transition: .25s $ease
       &:hover
-        color: $fontColor50
+        color: rgba(white, .75)
+        border-color: lighten(#0968A3, 10%)
   &__cta
+    display: inline-block
     text-align: center
-    margin-top: auto
-    a
-      transition: .25s $ease
-      &:hover
-        color: $fontColor50
+    background: #063B5D
+    padding: 26px 15px
+    font-size: 20px
+    span
+      display: inline-block
+      font-weight: 900
+      transition: color .25s $ease
+    &:hover
+      span
+        color: rgba(white, .75)
 
   &.is-active
+    background: rgba(#07456C, .2)
     pointer-events: all
-    transform: translate3d(0,0,0)
+    .mobile-navi
+      &__wrapper
+        transform: translate3d(0,0,0)
 
 +r($md)
   .mobile-navi
     display: flex
+
+.header.is-fixed
+  & + .mobile-navi
+    .mobile-navi__wrapper
+      padding-top: 58px

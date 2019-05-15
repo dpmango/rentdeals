@@ -10,61 +10,88 @@
   will-change: transform
   backface-visibility: hidden
   transform-style: preserve-3d
+  overflow: hidden
   &__wrapper
     display: flex
     align-items: center
-    height: 70px
+    padding: 35px 0 25px
+    transition: padding .25s $ease
 
   &__logo
     flex: 0 0 auto
-    font-size: 35px
-    padding-right: 30px
+    font-size: 0
+    margin-right: 30px
+    .ico
+      font-size: 33px
 
   &__cta
     margin-left: auto
     padding-left: 30px
 
   &__phone
-    span
+    font-size: 20px
+    a
+      display: inline-block
+      font-weight: 900
       color: white
+      transition: color .25s $ease
+      &:hover
+        color: rgba(white, .5)
+
+  &__callback
+    margin-left: 30px
 
   &__hamburger
     display: none
     padding-left: 20px
+    .hamburger
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        z-index: 1
+        top: 0
+        right: 0
+        width: 64px
+        height: 100px
+        background: #063B5D
+        opacity: 0
+        transition: opacity .25s $ease
+      &.is-active
+        &::after
+          opacity: 1
+    .hamburger-box
+      z-index: 2
 
   &.is-fixed
-    // should be normalized to -100% scroll at this point
     position: fixed
-    // visibility: hidden
-    transform: translate3d(0,-100%,0) !important
+    transform: translate3d(0,0%,0) !important
     transition: transform .25s $ease
     .header__wrapper
       padding-top: 10px
       padding-bottom: 10px
-
-  &.is-fixed-visible
-    // visibility: visible
-    transform: translate3d(0,0,0) !important
 
   &.is-transitioning
     transition: transform .25s $ease
     transform: translate3d(0,-100%,0) !important
 
 
-+r($lg)
++r($md)
   .header
     &__cta
       display: none
-
-+r($md)
-  .header
-    &__menu
-      display: none
-    &__hamburger
+    &__callback
       margin-left: auto
+    &__hamburger
       display: block
+
 
 +r($sm)
   .header
     &__logo
-      font-size: 30px
+      padding-left: 65px
+      margin-left: auto
+      margin-right: auto
+    &__callback
+      display: none
+    &__hamburger

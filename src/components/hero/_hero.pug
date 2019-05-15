@@ -1,0 +1,18 @@
+// HERO
+.hero
+  .hero__image
+    img(src='img/hero.jpg' srcset='img/hero@2x.jpg 2x')
+  .hero__content
+    .container
+      .hero__wrapper
+        h1.h1-title.hero__title(data-aos="fade-up") search furnished <span class="f-800">apartments</span>
+
+        form(action="#" js-input-focus data-aos="fade-up").hero__form.form-hero
+          .form-hero__wrapper
+            .form-hero__icon
+              +svgMono("location")
+            .form-hero__input
+              input(type="text" placeholder="Enter city, Zip code, Neighborhood, or Street Name.")
+            .form-hero__cta
+              button(type="submit").btn
+                +svgMono("search")
