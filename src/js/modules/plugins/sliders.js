@@ -1,7 +1,7 @@
 //////////
 // SLIDERS
 //////////
-(function($, APP) {
+(function ($, APP) {
   APP.Plugins.Sliders = {
     data: {
       swipers: [],
@@ -12,15 +12,15 @@
         },
       },
     },
-    init: function() {
+    init: function () {
       this.initSwipers();
       this.initResponsiveSwipers();
       this.listenResize();
     },
-    listenResize: function() {
+    listenResize: function () {
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
-    initSwipers: function() {
+    initSwipers: function () {
       // EXAMPLE SWIPER
       new Swiper('[js-slider]', {
         wrapperClass: 'swiper-wrapper',
@@ -52,13 +52,13 @@
       });
     },
 
-    initResponsiveSwipers: function() {
+    initResponsiveSwipers: function () {
       var featuredProducts = '[js-featured-products-swiper]';
       if ($(featuredProducts).length > 0) {
         this.initFeaturedProductsSwiper(featuredProducts);
       }
     },
-    initFeaturedProductsSwiper: function(selector) {
+    initFeaturedProductsSwiper: function (selector) {
       var dataObj = this.data.responsiveSwipers.featuredProducts;
 
       if ($(selector).length > 0) {
@@ -81,7 +81,7 @@
         }
       }
     },
-    destroy: function() {
+    destroy: function () {
       // ... code ...
     },
   };
