@@ -1,11 +1,38 @@
 $sprite: (
-	logo: (
+	benefit-diary: (
+		offset-x: -230px,
+		offset-y: 0px,
+		width: 216px,
+		height: 218px,
+		total-width: 446px,
+		total-height: 441px,
+		image: '../img/sprite.png'
+	),
+	benefit-range: (
+		offset-x: 0px,
+		offset-y: -230px,
+		width: 210px,
+		height: 211px,
+		total-width: 446px,
+		total-height: 441px,
+		image: '../img/sprite.png'
+	),
+	benefit-wallet: (
 		offset-x: 0px,
 		offset-y: 0px,
+		width: 220px,
+		height: 220px,
+		total-width: 446px,
+		total-height: 441px,
+		image: '../img/sprite.png'
+	),
+	logo: (
+		offset-x: -220px,
+		offset-y: -230px,
 		width: 185px,
 		height: 33px,
-		total-width: 185px,
-		total-height: 33px,
+		total-width: 446px,
+		total-height: 441px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +91,15 @@ $sprite: (
 
 
 
+	.icon-benefit-diary {
+		@include sprite(benefit-diary)
+	}
+	.icon-benefit-range {
+		@include sprite(benefit-range)
+	}
+	.icon-benefit-wallet {
+		@include sprite(benefit-wallet)
+	}
 	.icon-logo {
 		@include sprite(logo)
 	}

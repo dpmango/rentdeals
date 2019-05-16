@@ -1,0 +1,40 @@
+// POPULAR CITIES
+-
+  var linkList = [
+    ["Atlanta","Austin","Baltimore","Boston","Milwaukee","Minneapolis","Nashville","New Haven"],
+    ["ClarendonCounty","ClarksvilleCounty","Clarksville City","Upshur","ClaudeCounty","Clear Lake","CleburneCounty","Cleveland	Liberty"],
+    ["Atlanta","Austin","Baltimore","Boston","Milwaukee","Minneapolis","Nashville","New Haven"],
+    ["ClarendonCounty","ClarksvilleCounty","Clarksville City","Upshur","ClaudeCounty","Clear Lake","CleburneCounty","Cleveland	Liberty"]
+  ]
+.popular-cities
+  .popular-cities__background(data-aos="fade-left")
+    include ../../icons/svg-inline/popularCitiesBg.svg
+
+  .container
+    .popular-cities__wrapper
+      .popular-cities__grid
+        .popular-cities__heading(data-aos="fade-up")
+          .popular-cities__title popular cities
+          .popular-cities__description Expand your search and check out one of these trending cities.
+
+        .popular-cities__links
+          .popular-cities__col
+            ul.popular-cities__list(data-aos="fade-up")
+              each link in linkList[0]
+                li
+                  a(href="#")= link
+          .popular-cities__col
+            ul.popular-cities__list(data-aos="fade-up" data-aos-delay="100")
+              each link in linkList[1]
+                li
+                  a(href="#")= link
+          .popular-cities__col
+            ul.popular-cities__list(data-aos="fade-up" data-aos-delay="200")
+              each link in linkList[2]
+                li
+                  a(href="#")= link
+          .popular-cities__col
+            ul.popular-cities__list(data-aos="fade-up" data-aos-delay="300")
+              each link in linkList[3]
+                li
+                  a(href="#")= link

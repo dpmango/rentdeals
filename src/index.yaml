@@ -2,6 +2,16 @@ ProjectTitle: Rentdeals
 
 PageList:
   - file: homepage.html
-    ready: 30
-  - file: page.html
-    ready: 0
+    ready: 65
+  - file: results.html
+    ready: 5
+  - file: property.html
+    ready: 5
+  - file: about.html
+    ready: 5
+  - file: sitemap.html
+    ready: 5
+  - file: contact.html
+    ready: 5
+  - file: mappreview.html
+    ready: 5

@@ -1,0 +1,27 @@
+// TOP CITIES
+.top-cities
+  .container
+    .top-cities__wrapper
+      .top-cities__head(data-aos="fade-up")
+        h2.top-cities__title top cities
+
+      .top-cities__grid
+        -
+          var list = [
+            {image: 'topCity_1', name: 'houston'},
+            {image: 'topCity_2', name: 'dallas'},
+            {image: 'topCity_3', name: 'austin'},
+            {image: 'topCity_4', name: 'fort worth'},
+            {image: 'topCity_5', name: 'san antonio'},
+            {image: 'topCity_6', name: 'arlington'}
+          ]
+
+        each card, idx in list
+          .top-cities__col
+            a(href="#" data-aos="fade-up" data-aos-delay= idx * 100).top-cities__card.card-topcity
+              .card-topcity__image
+                img(src='img/'+card.image+'.jpg' srcset='img/'+card.image+'@2x.jpg 2x')
+              .card-topcity__name= card.name
+
+      .top-cities__cta(data-aos="fade-up")
+        a(href="#").btn.btn-outline.btn-outline--blue.btn--big Learn more
