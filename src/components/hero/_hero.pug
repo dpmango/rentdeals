@@ -12,7 +12,7 @@
             .form-hero__icon
               +svgMono("location")
             .form-hero__input
-              input(type="text" placeholder="Enter city, Zip code, Neighborhood, or Street Name.")
+              input(type="text" placeholder="Enter city, Zip code, Neighborhood, or Street Name." data-placeholder-desktop="Enter city, Zip code, Neighborhood, or Street Name." data-placeholder-mobile="Address, Neighborhood, City, Zip" js-responsive-placeholder)
             .form-hero__cta
               button(type="submit").btn
                 +svgMono("search")

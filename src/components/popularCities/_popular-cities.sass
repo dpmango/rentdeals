@@ -2,14 +2,17 @@
 .popular-cities
   position: relative
   z-index: 1
-  padding: 90px 0 80px
+  overflow: hidden
+  padding: 110px 0 80px
   &__background
     position: absolute
     z-index: 1
     right: 0
     bottom: 0
+    width: 1014px
     pointer-events: none
     user-select: none
+    font-size: 0
     svg
       max-width: 100%
   &__wrapper
@@ -27,8 +30,8 @@
 
   &__heading
     width: 100%
-    flex: 0 0 38%
-    max-width: 38%
+    flex: 0 0 40%
+    max-width: 40%
     min-heigth: 0
     min-width: 1px
     padding-left: 15px
@@ -38,13 +41,15 @@
     font-family: $titleFont
     text-transform: uppercase
   &__description
+    max-width: 405px
     font-size: 23px
+    line-height: 1.42
     font-weight: 500
 
   &__links
     width: 100%
-    flex: 0 0 62%
-    max-width: 62%
+    flex: 0 0 60%
+    max-width: 60%
     min-heigth: 0
     min-width: 1px
     display: flex
@@ -71,7 +76,7 @@
       font-weight: 500
       margin-left: -5px
       margin-right: -5px
-      margin-bottom: 10px
+      margin-bottom: 7px
     a
       display: inline-block
       padding: 5px
@@ -81,12 +86,38 @@
 
 +r($lg)
   .popular-cities
-    padding: 60px 0 50px
+    padding: 80px 0 50px
     &__heading
       flex-basis: 100%
       max-width: 100%
       text-align: center
       margin-bottom: 50px
+    &__description
+      margin-left: auto
+      margin-right: auto
     &__links
       flex-basis: 100%
       max-width: 100%
+
++r($md)
+  .popular-cities
+    &__background
+      right: auto
+      left: 0
+    &__col
+      flex-basis: 33.333%
+      max-width: 33.333%
+      &:nth-child(4)
+        display: none
+
++r($sm)
+  .popular-cities
+    padding: 70px 0 30px
+    &__heading
+      text-align: left
+      margin-bottom: 35px
+    &__col
+      flex-basis: 50%
+      max-width: 50%
+      &:nth-child(4)
+        display: block

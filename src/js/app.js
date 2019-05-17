@@ -71,6 +71,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
       APP.Plugins.InputFocuses.init();
+      APP.Plugins.ResponsivePlaceholder.init();
     };
 
     // All components from `src/componenets`

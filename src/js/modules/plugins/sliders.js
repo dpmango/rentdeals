@@ -1,26 +1,26 @@
 //////////
 // SLIDERS
 //////////
-(function ($, APP) {
+(function($, APP) {
   APP.Plugins.Sliders = {
     data: {
       swipers: [],
       responsiveSwipers: {
-        featuredProducts: {
+        topCities: {
           instance: undefined,
-          disableOn: 1201,
+          disableOn: 568,
         },
       },
     },
-    init: function () {
+    init: function() {
       this.initSwipers();
       this.initResponsiveSwipers();
       this.listenResize();
     },
-    listenResize: function () {
+    listenResize: function() {
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
-    initSwipers: function () {
+    initSwipers: function() {
       // EXAMPLE SWIPER
       new Swiper('[js-slider]', {
         wrapperClass: 'swiper-wrapper',
@@ -52,14 +52,14 @@
       });
     },
 
-    initResponsiveSwipers: function () {
-      var featuredProducts = '[js-featured-products-swiper]';
-      if ($(featuredProducts).length > 0) {
-        this.initFeaturedProductsSwiper(featuredProducts);
+    initResponsiveSwipers: function() {
+      var topCities = '[js-slider-topcities-mobile]';
+      if ($(topCities).length > 0) {
+        this.initFeaturedProductsSwiper(topCities);
       }
     },
-    initFeaturedProductsSwiper: function (selector) {
-      var dataObj = this.data.responsiveSwipers.featuredProducts;
+    initFeaturedProductsSwiper: function(selector) {
+      var dataObj = this.data.responsiveSwipers.topCities;
 
       if ($(selector).length > 0) {
         if (window.innerWidth >= dataObj.disableOn) {
@@ -71,17 +71,18 @@
           if (dataObj.instance === undefined) {
             dataObj.instance = new Swiper(selector, {
               slidesPerView: 'auto',
-              breakpoints: {
-                992: {
-                  spaceBetween: 0,
-                },
-              },
+              slideClass: 'top-cities__col',
+              slidesOffsetBefore: 15,
+              slidesOffsetAfter: 15,
+              freeMode: true,
+              freeModeSticky: true,
+              spaceBetween: 12,
             });
           }
         }
       }
     },
-    destroy: function () {
+    destroy: function() {
       // ... code ...
     },
   };

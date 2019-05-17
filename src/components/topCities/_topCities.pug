@@ -5,7 +5,7 @@
       .top-cities__head(data-aos="fade-up")
         h2.top-cities__title top cities
 
-      .top-cities__grid
+      .top-cities__grid.swiper-container(js-slider-topcities-mobile)
         -
           var list = [
             {image: 'topCity_1', name: 'houston'},
@@ -16,12 +16,13 @@
             {image: 'topCity_6', name: 'arlington'}
           ]
 
-        each card, idx in list
-          .top-cities__col
-            a(href="#" data-aos="fade-up" data-aos-delay= idx * 100).top-cities__card.card-topcity
-              .card-topcity__image
-                img(src='img/'+card.image+'.jpg' srcset='img/'+card.image+'@2x.jpg 2x')
-              .card-topcity__name= card.name
+        .swiper-wrapper
+          each card, idx in list
+            .top-cities__col
+              a(href="#" data-aos="fade-up" data-aos-delay= idx * 100).top-cities__card.card-topcity
+                .card-topcity__image
+                  img(src='img/'+card.image+'.jpg' srcset='img/'+card.image+'@2x.jpg 2x')
+                .card-topcity__name= card.name
 
       .top-cities__cta(data-aos="fade-up")
-        a(href="#").btn.btn-outline.btn-outline--blue.btn--big Learn more
+        a(href="#").btn.btn-outline.btn-outline--blue.btn--big.ttu BROWSE CITIES

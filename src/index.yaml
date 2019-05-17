@@ -2,7 +2,7 @@ ProjectTitle: Rentdeals
 
 PageList:
   - file: homepage.html
-    ready: 65
+    ready: 90
   - file: results.html
     ready: 5
   - file: property.html
