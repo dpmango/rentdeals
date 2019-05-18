@@ -4,15 +4,19 @@
 
 .header-city-foto
   position: relative
-  &__img
-    display: block
-    max-width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  height: 544px
   &__city
-    +vcenter
     color: #fff
     font-weight: 500
     font-size: 90px
     line-height: 123px
+    margin: 0
 
 .learn-more-row
   width: 100%
@@ -71,6 +75,7 @@
     font-size: 18px
     font-weight: 300
     margin-bottom: 20px
+    line-height: 1.4
   &__grid-img
     display: flex
     flex-wrap: wrap
@@ -82,19 +87,69 @@
   &__city-img
     display: block
     width: 100%
-  &__tabl
+  &__wrap-list
     display: flex
-    flex-direction: column
-  &__tabl-row
-    display: flex
-    padding: 15px 0
-    border-bottom: 1px solid #C5C5C5
-    &:first-child
-      .learn-more__tabl-col
-        color: $colorPrimary
-  &__tabl-col
+    flex-wrap: wrap
+    width: 100%
+  &__list
     width: 25%
-    font-size: 16px
-    font-weight: 500
-    color: #4a4a4a
-    line-height: normal
+    margin: 0
+    padding: 0
+    li
+      display: block
+      padding: 15px 0
+      font-size: 16px
+      font-weight: 500
+      line-height: normal
+      border-bottom: 1px solid #C5C5C5
+      &:first-child
+        color: $colorPrimary
+  &__stub
+    height: 53px
+  &__dabl
+    display: flex
+    .learn-more__list
+      width: 50%
+
++r($lg)
+  .header-city-foto
+    height: 300px
+    &__city
+      font-size: 70px
+      line-height: 93px
+  .learn-more
+    &__list
+      width: 50%
+    &__dabl
+      flex-wrap: wrap
+
++r($md)
+  .header-city-foto
+    &__city
+      font-size: 50px
+      line-height: 65px
+  .learn-more
+    &__ul
+      flex-wrap: wrap
+    &__title
+      font-size: 28px
+      line-height: 40px
+
+
++r($sm)
+  .header-city-foto
+    height: 250px
+    &__city
+      font-size: 35px
+      line-height: 42px
+  .learn-more
+    &__list
+      width: 100%
+    &__dabl
+      .learn-more__list
+        width: 100%
+    &__stub
+      display: none !important
+    &__city
+      width: 100%
+

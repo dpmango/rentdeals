@@ -1,9 +1,8 @@
 // learn-more-about-city
 
 section.indent-top-menu
-  .header-city-foto
-    img.header-city-foto__img(src="img/houston.jpg", srcset="img/houston@2x.jpg", alt="")
-    .header-city-foto__city Houston
+  .header-city-foto(style='background-image: url(../img/houston@2x.jpg)')
+    h1.header-city-foto__city Houston
 
 section.section_indent
   .container
@@ -42,91 +41,83 @@ section.section_indent
       .learn-more
         .learn-more__title.learn-more__title_indent_m Explore the City
         .learn-more__p As of May 2019, the average apartment rent in Houston, TX is $830 for a studio, $979 for one bedroom, $1,221 for two bedrooms, and $1,495 for three bedrooms. Apartment rent in Houston has increased by 0.1% in the past year.
-        .learn-more__tabl
-          .learn-more__tabl-row
-            .learn-more__tabl-col Beds
-            .learn-more__tabl-col Avg Sq Ft
-            .learn-more__tabl-col Avg Rent
-          .learn-more__tabl-row
-            .learn-more__tabl-col Studio
-            .learn-more__tabl-col 510
-            .learn-more__tabl-col $830
-          .learn-more__tabl-row
-            .learn-more__tabl-col 1 BR
-            .learn-more__tabl-col 727
-            .learn-more__tabl-col $979
-          .learn-more__tabl-row
-            .learn-more__tabl-col 2 BR
-            .learn-more__tabl-col 1,043
-            .learn-more__tabl-col $1,221
-          .learn-more__tabl-row
-            .learn-more__tabl-col 3 BR
-            .learn-more__tabl-col 1,359
-            .learn-more__tabl-col $1,495
+        .learn-more__wrap-list
+          ul.learn-more__list
+            li Beds
+            li Studio
+            li 1 BR
+            li 2 BR
+            li 3 BR
+          ul.learn-more__list
+            li Avg Sq Ft
+            li 510
+            li 727
+            li 1,043
+            li 1,359
+          ul.learn-more__list
+            li Avg Rent
+            li $830
+            li $979
+            li $1,221
+            li $1,495
+
 
     .learn-more-row.learn-more-row_indent_x3
       .learn-more
         .learn-more__title.learn-more__title_indent_m Explore the City
-        .learn-more__tabl
-          .learn-more__tabl-row
-            .learn-more__tabl-col Statistic
-            .learn-more__tabl-col Value
-          .learn-more__tabl-row
-            .learn-more__tabl-col Per Capita Income
-            .learn-more__tabl-col $51,245
-          .learn-more__tabl-row
-            .learn-more__tabl-col Median Household Income
-            .learn-more__tabl-col $64,614
-          .learn-more__tabl-row
-            .learn-more__tabl-col Population Density
-            .learn-more__tabl-col 823 per square mile
-          .learn-more__tabl-row
-            .learn-more__tabl-col Total Population
-            .learn-more__tabl-col 7,053,063 people
-          .learn-more__tabl-row
-            .learn-more__tabl-col Average Age
-            .learn-more__tabl-col 35 years old
-          .learn-more__tabl-row
-            .learn-more__tabl-col Square Miles
-            .learn-more__tabl-col 602.00 square miles
-          .learn-more__tabl-row
-            .learn-more__tabl-col Average Rent
-            .learn-more__tabl-col $979 per month
-          .learn-more__tabl-row
-            .learn-more__tabl-col Monthly Rent Change
-            .learn-more__tabl-col 0.05%
+        .learn-more__wrap-list
+          ul.learn-more__list
+            li Statistic
+            li Per Capita Income
+            li Median Household Income
+            li Population Density
+            li Total Population
+            li Average Age
+            li Square Miles
+            li Average Rent
+            li Monthly Rent Change
+          ul.learn-more__list
+            li Value
+            li $51,245
+            li $64,614
+            li 823 per square mile
+            li 7,053,063 people
+            li 35 years old
+            li 602.00 square miles
+            li $979 per month
+            li 0.05%
 
     .learn-more-row
       .learn-more
         .learn-more__title.learn-more__title_indent_m Nearby
-        .learn-more__tabl
-          .learn-more__tabl-row
-            .learn-more__tabl-col Cities
-            .learn-more__tabl-col
-            .learn-more__tabl-col Neighborhood
-            .learn-more__tabl-col
-          .learn-more__tabl-row
-            .learn-more__tabl-col Hilshire Village
-            .learn-more__tabl-col West University Place
-            .learn-more__tabl-col Oak Forest-Garden Oaks
-            .learn-more__tabl-col Lazy Brook-Timbergrove
-          .learn-more__tabl-row
-            .learn-more__tabl-col Hedwig Village
-            .learn-more__tabl-col Bellaire
-            .learn-more__tabl-col Cottage Grove
-            .learn-more__tabl-col Greater Heights
-          .learn-more__tabl-row
-            .learn-more__tabl-col Bunker Hill Village
-            .learn-more__tabl-col Jersey Village
-            .learn-more__tabl-col Independence Heights
-            .learn-more__tabl-col Spring Branch East
-          .learn-more__tabl-row
-            .learn-more__tabl-col Jacinto City
-            .learn-more__tabl-col Galena Park
-            .learn-more__tabl-col Langwood
-            .learn-more__tabl-col Memorial Park
-          .learn-more__tabl-row
-            .learn-more__tabl-col Spring
-            .learn-more__tabl-col Bordersville
-            .learn-more__tabl-col Acres Home
-            .learn-more__tabl-col Rice Military
+        .learn-more__dabl
+          .learn-more__wrap-list
+            ul.learn-more__list
+              li Cities
+              li Hilshire Village
+              li Hedwig Village
+              li Bunker Hill Village
+              li Jacinto City
+              li Sprin
+            ul.learn-more__list
+              li.learn-more__stub
+              li West University Place
+              li Bellaire
+              li Jersey Village
+              li Galena Park
+              li Bordersvill
+          .learn-more__wrap-list
+            ul.learn-more__list
+              li Neighborhood
+              li Oak Forest-Garden Oaks
+              li Cottage Grove
+              li Independence Heights
+              li Langwood
+              li Acres Home
+            ul.learn-more__list
+              li.learn-more__stub
+              li Lazy Brook-Timbergrove
+              li Greater Heights
+              li Spring Branch East
+              li Memorial Park
+              li Rice Military
