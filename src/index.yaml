@@ -8,11 +8,11 @@ PageList:
   - file: property.html
     ready: 5
   - file: about.html
-    ready: 5
+    ready: 80
   - file: sitemap.html
-    ready: 5
+    ready: 80
   - file: contact.html
-    ready: 5
+    ready: 80
   - file: mappreview.html
     ready: 5
   - file: lern-more-about-city.html

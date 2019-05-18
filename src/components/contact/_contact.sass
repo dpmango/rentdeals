@@ -28,14 +28,14 @@
     font-size: 30px
     font-weight: 900
     line-height: 34px
-    color: #03588e
+    color: $colorPrimary
 
 .line-1168
   margin: 0 auto
   width: 100%
   max-width: 1168px
   height: 0.5px
-  background-color: #979797
+  background-color: $borderColor
 
 .form-call-back
   width: 100%
@@ -50,27 +50,19 @@
     font-size: 20px
     &_indent
       margin-bottom: 44px
-  &__wrap-input
+  &__grid
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-  &__input
-    border-radius: 2px
-    height: 59px
-    padding: 0 27px
-    font-size: 15px
-    line-height: 20px
-    border: 0.5px solid #979797
+  &__item
     width: calc(50% - 12.5px)
-    &_indent
-      margin-bottom: 22px
-  &__textarea
-    width: 100%
-    padding: 20px 27px
-    resize: none
-    height: 155px
-    &_indent
-      margin-bottom: 21px
+    margin-bottom: 22px
+    &--textarea
+      width: 100%
+    .ui-group
+      margin-bottom: 0
+
+
   &__wrap-btn
     display: flex
     justify-content: flex-end
@@ -89,9 +81,9 @@
     &_indent
       padding-top: 28px
       padding-bottom: 47px
-    &__wrap-input
+    &__grid
       flex-wrap: wrap
-    &__input
+    &__item
       width: 100%
     &__wrap-btn
       justify-content: center
