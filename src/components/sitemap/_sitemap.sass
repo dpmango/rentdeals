@@ -1,0 +1,104 @@
+/////////////
+// SITEMAP STYLES
+/////////////
+
+.sitemap
+  padding-bottom: 115px
+
+  &__search
+    margin-top: 24px
+    position: relative
+    max-width: 405px
+    .ui-input
+      padding-right: 60px
+    &-button
+      position: absolute
+      top: 0
+      background: transparent
+      right: 0
+      height: 59px
+      width: 59px
+      font-size: 21px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $colorPrimary
+      &:hover
+        color: $colorPrimaryHover
+
+  &__breadcrumbs
+    margin-top: 24px
+    a
+      display: flex
+      font-size: 18px
+      line-height: 1.3
+      color: $colorPrimary
+      display: inline-block
+      &:hover
+        color: $colorPrimaryHover
+      &:after
+        display: inline-block
+        position: relative
+        content: ' > '
+        color: $fontColor
+        margin: 0 6px
+      &:last-child
+        color: $fontColor
+        &:after
+          display: none
+
+  &__name-page
+    margin: 35px 0 0 0
+    font-size: 18px
+    color: $fontColor
+    font-weight: 500
+
+  &__item
+    margin-top: 24px
+    border-top: 1px solid $borderColor
+    padding-top: 24px
+
+  &__title
+    margin: 0
+    font-size: 20px
+    font-weight: 800
+
+  &__links
+    display: flex
+    flex-wrap: wrap
+    margin-top: 12px
+    a
+      font-size: 17px
+      line-height: 1.5
+      font-weight: 350
+      display: inline-block
+      max-width: 20%
+      width: 100%
+      padding-right: 20px
+      margin-top: 3px
+
+
++r($lg)
+  .sitemap
+    &__links
+      a
+        max-width: 25%
+
++r($md)
+  .sitemap
+    &__links
+      a
+        max-width: 50%
+
++r($sm)
+  .sitemap
+    padding-bottom: 74px
+    &__search
+      max-width: 100%
+    &__links
+      padding-left: 20px
+      margin-top: 10px
+      a
+        margin-top: 4px
+        max-width: 100%
+        color: $colorPrimary

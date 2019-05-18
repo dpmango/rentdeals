@@ -10,7 +10,7 @@ PageList:
   - file: about.html
     ready: 80
   - file: sitemap.html
-    ready: 5
+    ready: 80
   - file: contact.html
     ready: 80
   - file: mappreview.html
