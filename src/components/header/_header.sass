@@ -14,7 +14,7 @@
   &__wrapper
     display: flex
     align-items: center
-    padding: 35px 0 25px
+    padding: 20px 0 15px
     transition: padding .25s $ease
 
   &__logo
@@ -65,6 +65,7 @@
 
   &.is-fixed
     position: fixed
+    background: rgba($colorPrimary, .9)
     transform: translate3d(0,0%,0) !important
     transition: transform .25s $ease
     .header__wrapper
@@ -78,6 +79,9 @@
 
 +r($md)
   .header
+    &__wrapper
+      padding-top: 10px
+      padding-bottom: 10px
     &__cta
       display: none
     &__callback

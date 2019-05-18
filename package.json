@@ -15,7 +15,6 @@
     "deploy": "gulp build --production && surge --project ./dist --domain rentdeals.surge.sh"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "barba.js": "^1.0.0",
     "gsap": "^2.0.2",
     "jquery": "^3.4.1",
