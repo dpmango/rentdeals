@@ -15,5 +15,5 @@ PageList:
     ready: 80
   - file: mappreview.html
     ready: 5
-  - file: lern-more-about-city.html
-    ready: 5
+  - file: learn-more-about-city.html
+    ready: 50
