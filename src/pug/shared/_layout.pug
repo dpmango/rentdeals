@@ -15,9 +15,13 @@ html(lang="en")
         .page__content
           block content
 
+
         if !excludeFooter
           block footer
             include ../../components/footer/_footer
+
+        block popups
+          include ../../components/popup/_popup
 
       block scripts
         include _scripts

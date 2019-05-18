@@ -32,6 +32,22 @@
             .parent()
             .toggleClass('is-open');
         })
+
+        // tabs popups
+        .on('click', '[js-open-popup-tab]', function(e) {
+          e.preventDefault();
+          var $self = $(this),
+            tabIndex = $self.index();
+          $self.siblings().removeClass('is-active');
+          $self.addClass('is-active');
+          // $(".top10__tab").removeClass("is-active");
+          $('.popup__tab')
+            .removeClass('is-active')
+            .css('display', 'none')
+            .eq(tabIndex)
+            .fadeIn();
+        })
+
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll

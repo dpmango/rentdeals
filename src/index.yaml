@@ -17,3 +17,5 @@ PageList:
     ready: 5
   - file: learn-more-about-city.html
     ready: 50
+  - file: 404.html
+    ready: 80

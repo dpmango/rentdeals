@@ -1,0 +1,185 @@
+/////////////
+// POPUP & 404 STYLES
+/////////////
+
+.page404
+  position: absolute
+  top: 40%
+  transform: translateY(-50%)
+
+  &__title
+    font-size: 35px
+    font-weight: 800
+    color: $colorPrimary
+    margin: 0
+
+  &__sub-title
+    font-size: 24px
+    color: $colorPrimary
+    margin: 20px 0 0 0
+
+  &__buttons
+    display: flex
+    margin-left: auto
+    margin-top: 40px
+    a
+      padding: 15px
+      font-size: 15px
+      line-height: 20px
+      border: 1px solid $colorPrimary
+      font-family: $baseFont
+      font-weight: 700
+      border-radius: 2px
+      color: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      background: $colorPrimary
+      transition: all .25s $ease
+      width: 105px
+      margin-right: 25px
+      &:hover
+        background: $colorPrimaryHover
+        border-color: $colorPrimaryHover
+
+.mfp-zoom-in
+  .mfp-with-anim
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-ready
+    .mfp-with-anim
+      opacity: 1
+      transform: scale(1)
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-with-anim
+      transform: scale(0.8)
+      opacity: 0
+    &.mfp-bg
+      opacity: 0
+
+.popup
+  z-index: 100
+  opacity: 0
+  filter: alpha(opacity = 100)
+  position: relative
+  max-width: 440px
+  width: 100%
+  margin: auto
+
+  &__title
+    font-size: 30px
+    margin: 0 auto
+    font-weight: 800
+    color: $colorPrimary
+    text-align: center
+    margin-bottom: 17px
+  a
+    color: #d52b1e
+
+  .ui-input
+    height: 50px
+
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+    a
+      background: #004c83
+      display: inline-block
+      color: #fff
+      padding: 9px 0 11px
+      width: 30.5%
+      max-width: 120px
+      text-align: center
+      font-size: 20px
+      position: relative
+      border-radius: 2px
+      transition: all .25s $ease
+      &:after
+        content: ''
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 4px 5px 0 5px
+        border-color: $colorPrimary transparent transparent transparent
+        position: absolute
+        top: 100%
+        left: 50%
+        transform: translateX(-50%)
+        opacity: 0
+        transition: all .25s $ease
+      &.is-active
+        background: #d52b1e
+        &:after
+          opacity: 1
+          border-color: #d52b1e transparent transparent transparent
+
+      &:hover
+        opacity: 0.8
+
+  &__tab
+    display: none
+    &.is-active
+      display: block
+
+  &__dont
+    margin: 15px 0 0 0
+
+  &__submit
+    margin-top: 25px
+    text-align: center
+    padding-bottom: 25px
+    border-bottom: 1px solid $borderColor
+    margin-bottom: 20px
+    .btn
+      background: $colorPrimary
+      color: #fff
+      border-radius: 2px
+      font-size: 16px
+      font-family: $baseFont
+      border-color: $colorPrimary
+      text-transform: none
+      font-weight: 600
+      &:hover
+        opacity: 0.9
+    &-info
+      margin: 20px 0 -5px 0
+      text-align: center
+      color: #c4c4c4
+
+  &__inner
+    outline: 10px solid rgba(255, 255, 255, 0.4)
+    background: #fff
+    width: 100%
+    margin: auto
+    padding: 20px
+    position: relative
+    margin: 20px auto
+
+  &__social
+    text-align: center
+    p
+      margin: 0
+    &-row
+      margin-top: 10px
+      a
+        font-size: 32px
+        height: 32px
+        display: inline-block
+        line-height: 1
+        margin: 0 10px
+        color: $colorPrimary
+        transition: all .25s $ease
+        &:hover
+          color: #d52b1e
+
+
++r($sm)
