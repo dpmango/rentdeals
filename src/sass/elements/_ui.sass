@@ -14,19 +14,41 @@
   -webkit-appearance: none
   display: block
   width: 100%
-  background: white
-  font-family: $systemFont
-  color: $fontColor50
-  border: 1px solid $borderColor
-  border-radius: 4px
-  padding: 12px 15px
+  // background: white
+  // font-family: $systemFont
+  // color: $fontColor50
+  // border: 1px solid $borderColor
+  // border-radius: 4px
+  // padding: 12px 15px
+  height: 59px
+  width: 100%
+  padding: 0 27px
+  font-size: 15px
+  line-height: 20px
+  border: 0.5px solid #979797
+  font-family: $baseFont
+  font-weight: 350
+  border-radius: 2px
+  color: $fontColor
+  &::-webkit-input-placeholder
+    color: #4A4A4A
+  &::-moz-placeholder
+    color: #4A4A4A
+  &:-ms-input-placeholder
+    color: #4A4A4A
+  &:-moz-placeholder
+    color: #4A4A4A
   &.has-error
     color: $colorRed
     &::placeholder
       color: rgba($colorRed, .5)
 
-.ui-input textarea
-  resize: vertical
+textarea.ui-input
+  resize: none
+  width: 100%
+  height: auto
+  padding: 20px 27px
+  height: 155px
 
 
 

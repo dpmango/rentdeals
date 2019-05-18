@@ -12,13 +12,23 @@ section.indent-top-menu
 
 section
   .container
-    form.form-call-back.form-call-back_indent
+    form.form-call-back.form-call-back_indent(action="#")
       .form-call-back__title.form-call-back__title_indent(data-aos="fade-up") Please send us your questions or comments
-      .form-call-back__wrap-input(data-aos="fade-up")
-        input.form-call-back__input.form-call-back__input_indent(type="text" placeholder="First Name *" required)
-        input.form-call-back__input.form-call-back__input_indent(type="text" placeholder="Last Name *" required)
-        input.form-call-back__input.form-call-back__input_indent(type="text" placeholder="Email Address")
-        input.form-call-back__input.form-call-back__input_indent(type="text" placeholder="Subject")
-      textarea(placeholder="Message")(data-aos="fade-up").form-call-back__textarea.form-call-back__textarea_indent
+      .form-call-back__grid(data-aos="fade-up")
+        .form-call-back__item
+          .ui-group
+            input.ui-input(type="text" placeholder="First Name *" required)
+        .form-call-back__item
+          .ui-group
+            input.ui-input(type="text" placeholder="Last Name *" required)
+        .form-call-back__item
+          .ui-group
+            input.ui-input(type="text" placeholder="Email Address")
+        .form-call-back__item
+          .ui-group
+            input.ui-input(type="text" placeholder="Subject")
+        .form-call-back__item.form-call-back__item--textarea
+          .ui-group
+            textarea.ui-input(placeholder="Message" data-aos="fade-up")
       .form-call-back__wrap-btn(data-aos="fade-up")
         button(type="submit").form-call-back__red-btn Send
