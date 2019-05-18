@@ -10,14 +10,16 @@
     position: relative
     max-width: 405px
     .ui-input
-      padding-right: 60px
+      padding-right: 55px
+      height: 53px
+      padding-left: 15px
     &-button
       position: absolute
       top: 0
       background: transparent
       right: 0
-      height: 59px
-      width: 59px
+      height: 53px
+      width: 53px
       font-size: 21px
       display: flex
       align-items: center
@@ -76,6 +78,9 @@
       width: 100%
       padding-right: 20px
       margin-top: 3px
+      transition: all .25s $ease
+      &:hover
+        color: $colorPrimary
 
 
 +r($lg)

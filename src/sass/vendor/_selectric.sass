@@ -10,9 +10,9 @@
   width: 100%
 
 .selectric
-  border: 1px solid #DDD
-  border-radius: 0px
-  background: #F8F8F8
+  // border: 1px solid #DDD
+  // border-radius: 2px
+  // background: #F8F8F8
   position: relative
   overflow: hidden
   .label
@@ -20,28 +20,42 @@
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
-    margin: 0 38px 0 10px
-    font-size: 12px
-    line-height: 38px
-    color: #444
-    height: 38px
-    -webkit-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
+    // margin: 0 38px 0 10px
+    // font-size: 12px
+    // line-height: 38px
+    // color: #444
+    // height: 38px
+    // -webkit-user-select: none
+    // -moz-user-select: none
+    // -ms-user-select: none
     user-select: none
+
+    display: flex
+    align-items: center
+
+    width: 100%
+    height: 53px
+    width: 100%
+    padding: 0 38px 0 15px
+    font-size: 15px
+    line-height: 20px
+    border: 0.5px solid $borderColor
+    font-family: $baseFont
+    font-weight: 350
+    border-radius: 2px
+    color: $fontColor
   .button
     display: block
     position: absolute
     right: 0
     top: 0
     width: 38px
-    height: 38px
-    line-height: 38px
-    background-color: #F8f8f8
-    color: #BBB
+    height: 53px
     text-align: center
-    font: 0/0 a
-    *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial
+    transition: all .25s $ease
+    font-size: 0
+    color: transparent
+
     &:after
       content: " "
       position: absolute
@@ -50,11 +64,9 @@
       bottom: 0
       left: 0
       margin: auto
-      width: 0
-      height: 0
-      border: 4px solid transparent
-      border-top-color: #BBB
-      border-bottom: none
+      width: 10px
+      height: 7px
+      background: url('../img/select-arrow.svg')
 
 .selectric-focus .selectric
   border-color: #aaaaaa
@@ -67,11 +79,14 @@
       border-top-color: #a2a2a2
 
 .selectric-open
-  z-index: 9999
+  z-index: 8
   .selectric
     border-color: #c4c4c4
   .selectric-items
     display: block
+  .button
+    transform: rotate(180deg)
+
 
 .selectric-disabled
   filter: alpha(opacity = 50)
@@ -131,10 +146,11 @@
   position: absolute
   top: 100%
   left: 0
-  background: #F8F8F8
-  border: 1px solid #c4c4c4
+  border: 0.5px solid $borderColor
+  border-radius: 2px
+  overflow: hidden
+  background: #fff
   z-index: -1
-  box-shadow: 0 0 10px -6px
   .selectric-scroll
     height: 100%
     overflow: auto
@@ -163,10 +179,10 @@
     color: #666
     cursor: pointer
     &.selected
-      background: #E0E0E0
-      color: #444
+      background: $colorPrimary
+      color: #fff
     &.highlighted
-      background: #D0D0D0
+      background: $borderColor
       color: #444
     &:hover
       background: #D5D5D5

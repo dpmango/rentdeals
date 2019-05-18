@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desk" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07_More_Filters" transform="translate(-684.000000, -148.000000)" fill="#000000">
+            <path d="M693.849896,153.528657 L689.361594,148.178464 C689.161759,147.940512 688.838102,147.940512 688.638496,148.178464 L684.149705,153.528657 C683.950098,153.766687 683.950098,154.152417 684.149705,154.390447 L684.511238,154.821361 C684.710845,155.059546 685.034794,155.059546 685.234531,154.821361 L688.999996,150.333036 L692.765591,154.821361 C692.965165,155.059546 693.288952,155.059546 693.488624,154.821361 L693.850157,154.390447 C694.049991,154.152146 694.049991,153.766687 693.849896,153.528657 Z" id="Path" transform="translate(689.000000, 151.500000) scale(1, -1) translate(-689.000000, -151.500000) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,209 @@
+/////////////
+// RESULTS STYLES
+/////////////
+
+.results
+
+  &__search
+    position: relative
+    margin: 24px 0
+    background: #fff
+    max-width: 405px
+    width: 30%
+    margin-right: 30px
+    .ui-input
+      padding-right: 60px
+      height: 53px
+      padding-left: 15px
+    &-button
+      position: absolute
+      top: 0
+      background: transparent
+      right: 0
+      height: 53px
+      width: 59px
+      font-size: 21px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $colorPrimary
+      &:hover
+        color: $colorPrimaryHover
+    &-grid
+      display: flex
+      align-items: center
+      width: 100%
+  &__item
+    margin-right: 15px
+    &--right
+      display: flex
+      align-items: center
+      margin-right: 0
+      margin-left: auto
+  &__more
+    position: relative
+    &.is-open
+      .results__more-filter
+        opacity: 1
+        pointer-events: all
+      .results__more-button
+        span
+          transform: translateY(-50%) rotate(180deg)
+
+    &-filter
+      box-shadow: 0 0 15px rgba(#000, 0.15)
+      position: absolute
+      width: 765px
+      left: 50%
+      transform: translateX(-50%)
+      top: 100%
+      opacity: 0
+      pointer-events: none
+      transition: all .25s $ease
+    &-content
+      padding: 10px 0
+    &-row
+      display: flex
+      align-items: flex-start
+      width: 100%
+      padding: 20px 16px
+      border-top: 1px dashed $borderColor
+      &:first-child
+        border-top: none
+      &--middle
+        align-items: center
+      p
+        font-weight: 800
+        font-size: 18px
+        padding-right: 20px
+        margin: 0
+        max-width: 180px
+        width: 100%
+        &.to
+          font-weight: 400
+          color: #9B9B9B
+          font-size: 17px
+          padding-right: 0
+          margin: 0 15px
+          max-width: 100%
+          width: auto
+    &-grid
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      width: 100%
+      margin-bottom: -16px
+      .ui-checkbox
+        width: 49%
+        margin-bottom: 16px
+    &-right
+      display: flex
+      width: 100%
+      align-items: center
+      justify-content: flex-start
+      .ui-group
+        width: 100%
+        .ui-input
+          padding-left: 15px
+          padding-right: 15px
+      .results__select
+        max-width: 180px
+        width: 40%
+    &-bottom
+      padding: 16px
+      display: flex
+      align-items: center
+      background: #EFEFEF
+      p
+        font-size: 18px
+        line-height: 1.4
+        margin: 0 15px 0 0
+        font-weight: 300
+    &-buttons
+      display: flex
+      margin-left: auto
+      .btn
+        display: inline-block
+        padding: 14px
+        width: 100px
+        margin-left: 10px
+        font-size: 11px
+        font-weight: 900
+        line-height: 1
+        border-radius: 2px
+        &--white
+          background: #fff
+          color: $colorPrimary
+          &:hover
+            background: $colorPrimary
+            color: #fff
+        &--blue
+          background: $colorPrimary
+          color: #fff
+          &:hover
+            background: #fff
+            color: $colorPrimary
+        &:first-child
+          margin-left: 0
+    &-button
+      height: 53px
+      padding: 0 15px
+      font-size: 15px
+      line-height: 20px
+      border: 0.5px solid $borderColor
+      font-family: $baseFont
+      font-weight: 350
+      border-radius: 2px
+      color: $fontColor
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      background: #fff
+      transition: all .25s $ease
+      padding-right: 38px
+      position: relative
+      &:hover
+        color: #fff
+        background: $colorPrimary
+        border-color: $colorPrimary
+      span
+        font-size: 7px
+        line-height: 0
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        width: 38px
+        text-align: center
+        transition: transform .25s $ease
+  &__button
+    height: 53px
+    padding: 0 27px
+    font-size: 15px
+    line-height: 20px
+    border: 1px solid $colorPrimary
+    font-family: $baseFont
+    font-weight: 350
+    border-radius: 2px
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    background: $colorPrimary
+    transition: all .25s $ease
+    width: 105px
+    margin-left: 15px
+    &:hover
+      background: $colorPrimaryHover
+      border-color: $colorPrimaryHover
+
+  &__grid
+    display: flex
+    &-none
+      display: none
+
+
++r($sm)
+  .results

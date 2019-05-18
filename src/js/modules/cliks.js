@@ -26,6 +26,12 @@
             e.stopPropagation();
           }
         })
+        // open more filter
+        .on('click', '[js-open-filters]', function(e) {
+          $(this)
+            .parent()
+            .toggleClass('is-open');
+        })
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll
