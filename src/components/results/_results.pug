@@ -1,8 +1,132 @@
 // RESULTS :: BEGIN
 
-section.indent-top-menu
-  .container
+section
+  .container.container--results
     .results
+      .results__grid
+        .results__map
+          img(src="img/map.jpg", alt="")
+        .results__info
+          .results__info-item
+            .results__info-head
+              p.results__info-title Auberry at Twin Creeks #1
+              p.results__info-adress 705 Bray Central Dr Allen, TX 75013
+              a.results__info-like(href="#")
+                +svgMono('heart')
+            .results__info-slider
+              .swiper-container(js-slider-results)
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url(../img/result1.jpg)")
+                  .swiper-slide(style="background-image: url(../img/result2.jpg)")
+                .swiper-pagination
+                .swiper-arrow.swiper-result-next
+                  +svgMono('right-arrow')
+                .swiper-arrow.swiper-result-prev
+                  +svgMono('left-arrow')
+            .results__info-bottom
+              .results__info-bottom-left
+                p.results__info-price $1,602 - 14,422
+                p.results__info-beds 1-3 Bed Available Now
+              .results__info-bottom-buttons
+                a.btn.btn-outline.btn--red(href="#")
+                  +svgMono('mail-result')
+                  | Get Quote
+                a.btn.btn-outline.btn-outline--blue(href="#")
+                  +svgMono('phone')
+                  | 281-713-5826
+          .results__info-item
+            .results__info-head
+              p.results__info-title Auberry at Twin Creeks #2
+              p.results__info-adress 705 Bray Central Dr Allen, TX 75013
+              a.results__info-like(href="#")
+                +svgMono('heart')
+            .results__info-slider
+              .swiper-container(js-slider-results)
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url(../img/result1.jpg)")
+                  .swiper-slide(style="background-image: url(../img/result2.jpg)")
+                .swiper-pagination
+                .swiper-arrow.swiper-result-next
+                  +svgMono('right-arrow')
+                .swiper-arrow.swiper-result-prev
+                  +svgMono('left-arrow')
+            .results__info-bottom
+              .results__info-bottom-left
+                p.results__info-price $1,602 - 14,422
+                p.results__info-beds 1-3 Bed Available Now
+              .results__info-bottom-buttons
+                a.btn.btn-outline.btn--red(href="#")
+                  +svgMono('mail-result')
+                  | Get Quote
+                a.btn.btn-outline.btn-outline--blue(href="#")
+                  +svgMono('phone')
+                  | 281-713-5826
+          .results__info-pagination
+            a.icon(href="#")
+              +svgMono('left-arrow')
+            a.is-active(href="#") 1
+            a(href="#") 2
+            a(href="#") 3
+            a(href="#") 4
+            a(href="#") 5
+            a(href="#") ...
+            a(href="#") 28
+            a.icon(href="#")
+              +svgMono('right-arrow')
+          .results__info-body
+            .results__info-breadcrumbs
+              a(href="#") Home
+              a(href="#") Texas
+              a(href="#") Houston Apartments for Rent
+            .results__info-content
+              p.title Apartments for rent in Houston, TX
+              p Rich in attractions, imagination, and talent, Houston is one of the largest and most distinctive cities in the United States as well as the biggest city in the Lone Star State. It’s a thriving hub of business and culture, with hundreds of years of history and people from around the world creating one of the nation’s most unique urban communities.
+              p Houston offers a wealth of attractions and activities for everyone. Cheer on Houston’s home teams whether you’re watching basketball at the Toyota Center, baseball at Minute Maid Park, football at NRG Stadium, or soccer at BBVA Compass Stadium. Indulge your curiosity at cultural institutions like the Houston Museum of Natural Science, Museum of Fine Arts Houston, and the Houston Zoo.
+              p The Galleria and Willowbrook Mall contain hundreds of stores sure to delight all kinds of shoppers. Outdoor adventure abounds at numerous greenspaces around the city, including Memorial Park, George Bush Park, Cullen Park, and Discovery Green. Nicknamed “The Space City,” Houston is also the famous home of NASA’s Johnson Space Center.
+              p Access to George Bush Intercontinental Airport and major highways makes getting around from Houston easy. San Antonio, Austin, and Dallas are all just a short drive away.
+              a(href="#") Learn More about Houston, TX
+              .results__info-table
+                .results__info-column
+                  p.title CITIES
+                  p Hilshire Village
+                  p West University Place
+                  p Hedwig Village
+                  p Bellaire
+                  p Bunker Hill Village
+                  p Jersey Village
+                  p Jacinto City
+                  p Galena Park
+                  p Spring
+                  p Bordersville
+                .results__info-column
+                  p.title NEIGHBORHOODS
+                  p Oak Forest-Garden Oaks
+                  p Lazy Brook-Timbergrove
+                  p Cottage Grove
+                  p Greater Heights
+                  p Independence Heights
+                  p Spring Branch East
+                  p Langwood
+                  p Memorial Park
+                  p Acres Home
+                  p Rice Military
+                .results__info-column
+                  p.title ZIP CODES
+                  p 77018
+                  p 77008
+                  p 77092
+                  p 77091
+                  p 77022
+                  p 77007
+                  p 77055
+                  p 77027
+                  p 77019
+                  p 77088
+            .results__info-background
+              include ../../icons/svg-inline/popularCitiesBg.svg
+
+          include ../../components/footer/_footer
+
 
 
 
