@@ -1,7 +1,7 @@
 //////////
 // SLIDERS
 //////////
-(function($, APP) {
+(function ($, APP) {
   APP.Plugins.Sliders = {
     data: {
       swipers: [],
@@ -12,15 +12,15 @@
         },
       },
     },
-    init: function() {
+    init: function () {
       this.initSwipers();
       this.initResponsiveSwipers();
       this.listenResize();
     },
-    listenResize: function() {
+    listenResize: function () {
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
-    initSwipers: function() {
+    initSwipers: function () {
       // EXAMPLE SWIPER
       new Swiper('[js-slider]', {
         wrapperClass: 'swiper-wrapper',
@@ -76,15 +76,42 @@
           prevEl: '.swiper-result-prev',
         },
       });
+
+      new Swiper('[js-slider-home]', {
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        direction: 'horizontal',
+        loop: false,
+        watchOverflow: true,
+        setWrapperSize: false,
+        spaceBetween: 0,
+        slidesPerGroup: 3,
+        slidesPerView: 'auto',
+        loop: false,
+        normalizeSlideIndex: true,
+        speed: 800,
+        // freeMode: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     },
 
-    initResponsiveSwipers: function() {
+    initResponsiveSwipers: function () {
       var topCities = '[js-slider-topcities-mobile]';
       if ($(topCities).length > 0) {
         this.initFeaturedProductsSwiper(topCities);
       }
     },
-    initFeaturedProductsSwiper: function(selector) {
+    initFeaturedProductsSwiper: function (selector) {
       var dataObj = this.data.responsiveSwipers.topCities;
 
       if ($(selector).length > 0) {
@@ -108,7 +135,7 @@
         }
       }
     },
-    destroy: function() {
+    destroy: function () {
       // ... code ...
     },
   };

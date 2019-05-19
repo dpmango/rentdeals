@@ -32,39 +32,176 @@ section
           li Texas
           li Houston
           li The Pointe at West Lake
-        .shift-to-the-l.temp-height
-          .swiper-container(js-slider)
+        .shift-to-the-l
+          .swiper-container.slider-home.slider-home_indent(js-slider-home)
             .swiper-wrapper
+              .swiper-slide(style="background-image: url('img/home1-big@2x.jpg')")
               .swiper-slide
-                span 123
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home2-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home3-small@2x.jpg')")
               .swiper-slide
-                span 123
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home4-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home5-small@2x.jpg')")
+              .swiper-slide(style="background-image: url('img/home1-big@2x.jpg')")
               .swiper-slide
-                span 123
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home2-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home3-small@2x.jpg')")
               .swiper-slide
-                span 123
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home4-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home5-small@2x.jpg')")
+              .swiper-slide(style="background-image: url('img/home1-big@2x.jpg')")
               .swiper-slide
-                span 123
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home2-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home3-small@2x.jpg')")
               .swiper-slide
-                span 123
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home4-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home5-small@2x.jpg')")
+              .swiper-slide(style="background-image: url('img/home1-big@2x.jpg')")
+              .swiper-slide
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home2-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home3-small@2x.jpg')")
+              .swiper-slide
+                .slider-home__wrap-img
+                  .slider-home__img(style="background-image: url('img/home4-small@2x.jpg')")
+                  .slider-home__img(style="background-image: url('img/home5-small@2x.jpg')")
             .swiper-pagination
             .swiper-button-next
+              +svgMono('right-arrow')
             .swiper-button-prev
-        ul.property_tab-link
+              +svgMono('left-arrow')
+        ul.property-tab-link
+          li
+            a(href="#tab1").property-tab-link_active All
           li 
-            a(href="#") All
+            a(href="#tab2") Studio
           li 
-            a(href="#") Studio
+            a(href="#tab3") 1 Bed
           li 
-            a(href="#") 1 Bed
+            a(href="#tab4") 2 Beds
           li 
-            a(href="#") 2 Beds
-          li 
-            a(href="#") 3 Beds
+            a(href="#tab5") 3 Beds
 
+        .property-tabs
+          #tab1.property-tab.property-tab_active
+            table.property-tabl
+              tbody
+                tr
+                  td Studio
+                  td 1 Bathroom
+                  td $1,630
+                  td 505 sq. ft.
+                  td M4-ADA
+                  td Available Now
+                  td
+                    a(href="#").property-tabl__btn View Model
+                - for (var x = 0; x < 8; x++)
+                  tr
+                    td Studio
+                    td 1 Bathroom
+                    td $1,730 - $1,840
+                    td 489 sq. ft.
+                    td M3
+                    td Available Now
+                    td
+                      a(href="#").property-tabl__btn View Model
+          #tab2.property-tab
+            table.property-tabl
+              tbody
+                tr
+                  td Studio
+                  td 1 Bathroom
+                  td $1,630
+                  td 505 sq. ft.
+                  td M4-ADA
+                  td Available Now
+                  td
+                    a(href="#").property-tabl__btn View Model
+                - for (var x = 0; x < 8; x++)
+                  tr
+                    td Studio
+                    td 1 Bathroom
+                    td $1,730 - $1,840
+                    td 489 sq. ft.
+                    td M3
+                    td Available Now
+                    td
+                      a(href="#").property-tabl__btn View Model
+          #tab3.property-tab
+            table.property-tabl
+              tbody
+                tr
+                  td Studio
+                  td 1 Bathroom
+                  td $1,630
+                  td 505 sq. ft.
+                  td M4-ADA
+                  td Available Now
+                  td
+                    a(href="#").property-tabl__btn View Model
+                - for (var x = 0; x < 8; x++)
+                  tr
+                    td Studio
+                    td 1 Bathroom
+                    td $1,730 - $1,840
+                    td 489 sq. ft.
+                    td M3
+                    td Available Now
+                    td
+                      a(href="#").property-tabl__btn View Model
+          #tab4.property-tab
+            table.property-tabl
+              tbody
+                tr
+                  td Studio
+                  td 1 Bathroom
+                  td $1,630
+                  td 505 sq. ft.
+                  td M4-ADA
+                  td Available Now
+                  td
+                    a(href="#").property-tabl__btn View Model
+                - for (var x = 0; x < 8; x++)
+                  tr
+                    td Studio
+                    td 1 Bathroom
+                    td $1,730 - $1,840
+                    td 489 sq. ft.
+                    td M3
+                    td Available Now
+                    td
+                      a(href="#").property-tabl__btn View Model
+          #tab5.property-tab
+            table.property-tabl
+              tbody
+                tr
+                  td Studio
+                  td 1 Bathroom
+                  td $1,630
+                  td 505 sq. ft.
+                  td M4-ADA
+                  td Available Now
+                  td
+                    a(href="#").property-tabl__btn View Model
+                - for (var x = 0; x < 8; x++)
+                  tr
+                    td Studio
+                    td 1 Bathroom
+                    td $1,730 - $1,840
+                    td 489 sq. ft.
+                    td M3
+                    td Available Now
+                    td
+                      a(href="#").property-tabl__btn View Model
 
       .wrap-main-section__right
-        .shift-to-the-r-t
+        .shift-to-the-r
           form.check-availability
             .check-availability__title Check Availability
             .check-availability__wrap

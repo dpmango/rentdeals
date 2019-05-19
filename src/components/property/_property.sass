@@ -59,12 +59,12 @@
     flex-shrink: 0
     width: 397px
 
-.shift-to-the-r-t
-  margin-top: -47px
+.shift-to-the-r
   width: calc(100% + 20px)
 
 .shift-to-the-l
-
+  width: calc(100% + 20px)
+  margin-left: -20px
 
 .check-availability
   background-color: #F4F4F4
@@ -82,7 +82,7 @@
     color: #fff
     font-size: 25px
     font-weight: 900
-    padding: 11.5px 25px
+    padding: 15px 25px
     width: 100%
     background-color: $colorPrimary
   &__wrap
@@ -131,6 +131,118 @@
     &:before
       content: '/ '
 
-.temp-height
-  height: 310px
-  padding-bottom: 50px
+.slider-home
+  height: 361px
+  &_indent
+    margin-bottom: 50px
+  .swiper-slide
+    &:nth-child(3n+1)
+      width: calc(60% - 4px)
+      margin-right: 4px
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+    &:nth-child(3n+2)
+      width: calc(20% - 8px)
+      margin-right: 4px
+      margin-left: 4px
+    &:nth-child(3n+3)
+      width: calc(20% - 4px)
+      margin-left: 4px
+  .swiper-pagination
+    position: absolute
+    z-index: 2
+    left: 0
+    bottom: 0
+    color: #fff
+    font-weight: 500
+    font-size: 18px
+    line-height: 25px
+    padding: 8px 22px
+    background-color: rgba(#000000, .6)
+  &__wrap-img
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    height: 100%
+  &__img
+    width: 100%
+    height: calc(50% - 4px)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    &:first-child
+      margin-bottom: 4px
+    &:last-child
+      margin-top: 4px
+  .swiper-button-next, .swiper-button-prev
+    position: absolute
+    cursor: pointer
+    z-index: 1
+    top: 50%
+    background-color: rgba(#000000,.6)
+    .ico
+      width: 17px
+      height: 25px
+      color: #fff
+  .swiper-button-next
+    padding: 11px 13px 11px 17px
+    left: 100%
+    transform: translate(-100%, -50%)
+  .swiper-button-prev
+    padding: 11px 17px 11px 13px
+    left: 0
+    transform: translate(0, -50%)
+
+.property-tab-link
+  display: flex
+  margin: 0
+  padding: 0
+  border-bottom: 1px solid #D0D0D0
+  li
+    margin-right: 35px
+    &:last-child
+      margin-right: 0
+    a
+      display: block
+      font-weight: 800
+      font-size: 18px
+      color: $colorPrimary
+  &_active
+    border-bottom: 4px solid #03588e
+
+.property-tabs
+  position: relative
+  overflow: hidden
+
+.property-tab
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  visibility: hidden
+  opacity: 0
+  transition: $transitionSpeed
+  &_active
+    position: relative
+    visibility: visible
+    opacity: 1
+
+.property-tabl
+  width: 100%
+  border-spacing: 0
+  td
+    border-bottom: 1px solid #D0D0D0
+    padding: 20px 0
+    font-size: 16px
+    line-height: 22px
+    &:last-child
+      width: 113px
+  &__btn
+    font-weight: 800
+    color: #fff
+    font-size: 15px
+    line-height: 20px
+    background-color: $colorPrimary
+    border-radius: 2px
+    padding: 9px 14px
