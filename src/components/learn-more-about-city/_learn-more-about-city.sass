@@ -122,6 +122,9 @@
       width: 50%
     &__dabl
       flex-wrap: wrap
+    &__no-responsive
+      .learn-more__list
+        width: calc(100% / 3)
 
 +r($md)
   .header-city-foto
@@ -145,6 +148,8 @@
   .learn-more
     &__list
       width: 100%
+      &_indent
+        margin-bottom: 20px
     &__dabl
       .learn-more__list
         width: 100%
@@ -152,4 +157,3 @@
       display: none !important
     &__city
       width: 100%
-
