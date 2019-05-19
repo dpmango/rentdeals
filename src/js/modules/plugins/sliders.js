@@ -50,6 +50,32 @@
           },
         },
       });
+
+      new Swiper('[js-slider-results]', {
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        direction: 'horizontal',
+        loop: false,
+        watchOverflow: true,
+        setWrapperSize: false,
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        loop: true,
+        normalizeSlideIndex: true,
+        speed: 800,
+        // freeMode: true,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-result-next',
+          prevEl: '.swiper-result-prev',
+        },
+      });
     },
 
     initResponsiveSwipers: function() {

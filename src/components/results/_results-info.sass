@@ -1,0 +1,212 @@
+/////////////
+// RESULTS-INFO STYLES
+/////////////
+
+.results
+  &__grid
+    display: flex
+    align-items: stretch
+
+  &__info
+    width: 50%
+    position: relative
+
+    &-item
+      position: relative
+      width: 100%
+      border-bottom: 1px solid #E4E4E4
+
+    &-head
+      position: absolute
+      width: 100%
+      padding: 12px 70px 12px 30px
+      background: rgba($colorPrimary, 0.88)
+      z-index: 2
+      p
+        margin: 0
+        color: #fff
+
+    &-title
+      font-size: 25px
+      font-weight: 800
+      line-height: 1.4
+
+    &-adress
+      font-size: 16px
+      line-height: 1.4
+      font-weight: 300
+
+    &-like
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 20px
+      font-size: 27px
+      line-height: 0
+      transition: all .25s $ease
+      color: #fff
+      &:hover
+        transform: translateY(-50%) scale(1.1)
+
+    &-bottom
+      background: #fff
+      padding: 12px 20px 12px 30px
+      display: flex
+      align-items: center
+      &-buttons
+        display: flex
+        margin-left: auto
+
+        .btn
+          display: flex
+          align-items: center
+          font-size: 18px
+          font-weight: 400
+          padding: 15px
+          line-height: 1.2
+          margin-left: 15px
+          .ico
+            margin-right: 10px
+
+          &--red
+            background: #ED1D25
+            border-color: #ED1D25
+            color: #fff
+            font-weight: 700
+            &:hover
+              background: #d42128
+
+    &-price
+      margin: 0
+      font-size: 20px
+      font-weight: 800
+      color: $fontColor
+
+    &-beds
+      font-size: 17px
+      font-weight: 300
+      margin: 11px 0 0 0
+
+    &-pagination
+      margin: 35px auto
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      a
+        font-size: 20px
+        line-height: 1.4
+        color: $colorPrimary
+        display: inline-block
+        margin: 0 12px
+        &.is-active
+          color: $fontColor
+        &.icon
+          height: 20px
+          line-height: 1
+
+    &-body
+      padding: 0 30px 60px
+      position: relative
+      overflow: hidden
+
+    &-content
+      position: relative
+      z-index: 2
+      p
+        margin: 15px 0 0 0
+        font-size: 20px
+        line-height: 1.4
+        color: #000000
+        font-weight: 300
+        &.title
+          font-size: 25px
+          font-weight: 800
+      a
+        display: inline-block
+        margin-top: 15px
+        font-size: 20px
+        line-height: 1.4
+        font-weight: 800
+        color: $colorPrimary
+        border-bottom: 1px solid $colorPrimary
+
+    &-background
+      position: absolute
+      bottom: 0
+      left: 100px
+      font-size: 0
+      z-index: 1
+
+    &-breadcrumbs
+      a
+        display: inline-block
+        position: relative
+        color: $colorPrimary
+        font-size: 18px
+        font-weight: 800
+        &:after
+          content: '/'
+          color: #000000
+          display: inline-block
+          margin: 0 5px
+        &:last-child
+          color: #000
+          pointer-events: none
+          &:after
+            display: none
+
+    &-table
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 50px
+
+    &-column
+      width: 32%
+      &:last-child
+        width: 25%
+      p
+        font-size: 17px
+        line-height: 1.2
+        &.title
+          font-size: 20px
+
+  .swiper-pagination
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 2
+    font-size: 18px
+    padding: 10px 30px
+    color: #fff
+    background: rgba(0,0,0,0.6)
+
+  .swiper-container
+    position: relative
+
+  .swiper-slide
+    min-height: 380px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+  .swiper-arrow
+    position: absolute
+    display: block
+    top: 57%
+    transform: translateY(-30%)
+    color: #fff
+    font-size: 25px
+    line-height: 0
+    z-index: 2
+    cursor: pointer
+    &.swiper-result-next
+      right: 25px
+    &.swiper-result-prev
+      left: 25px
+
+
+
++r($sm)
+  .results
