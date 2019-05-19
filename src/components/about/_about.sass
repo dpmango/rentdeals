@@ -3,9 +3,10 @@
 /////////////
 
 .about-us
-  max-width: 1200px
-  margin: 0 auto
-
+  &__head
+    max-width: 800px
+    margin: 0 auto
+    text-align: center
   &__ico
     text-align: center
     font-size: 145px
@@ -18,8 +19,6 @@
     line-height: 1.35
     text-align: center
     font-weight: 900
-    max-width: 780px
-    margin: 0 auto
     a
       color: $colorPrimary
 
@@ -29,36 +28,33 @@
     font-size: 18px
     color: $fontColor
     line-height: 1.4
-    font-weight: 350
 
   &__grid
-    margin: 96px 0
+    margin: 82px 0 96px
     display: flex
-    align-items: flex-start
     justify-content: space-between
 
-  &__item
-    max-width: 550px
+  &__col
+    max-width: 540px
     width: 48%
+    h2
+      font-size: 25px
+      line-height: 1.35
+      color: $colorPrimary
+      font-weight: 900
+      margin: 0
+    p + p
+      margin-top: 1.5em
 
-  &__question
-    font-size: 25px
-    line-height: 1.35
-    color: $colorPrimary
-    font-weight: 900
-    margin: 0
-
-  &__info
+  p
     margin: 24px 0 0 0
     font-size: 18px
     color: $fontColor
-    line-height: 1.4
-    font-weight: 350
+    font-weight: normal
+    line-height: 1.45
 
-
-+r($sm)
++r($md)
   .about-us
-
     &__ico
       font-size: 101px
       margin: 65px auto 44px
@@ -70,10 +66,10 @@
       justify-content: center
       text-align: center
 
-    &__item
+    &__col
       width: 100%
-      max-width: 100%
+      // max-width: 100%
       margin-top: 45px
 
-    &__question
-      font-size: 20px
+      h2
+        font-size: 20px
