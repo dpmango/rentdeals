@@ -43,6 +43,7 @@
 
   &__hamburger
     display: none
+    margin-right: -5px
     padding-left: 20px
     .hamburger
       &::after
@@ -93,15 +94,11 @@
 +r($sm)
   .header
     &__logo
-      padding-left: 65px
+      padding-left: 45px
       margin-left: auto
       margin-right: auto
     &__callback
       display: none
     &__hamburger
-
-+r(320)
-  .header__hamburger
-    padding-left: 0
-  .header__hamburger .hamburger:after
-    width: 54px
+      padding-left: 0
+      margin-right: 0
