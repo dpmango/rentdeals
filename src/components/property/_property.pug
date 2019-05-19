@@ -1,6 +1,6 @@
 // property
 
-section.indent-top-menu
+section.indent-top-menu.property-line-b
   .container
     .property-top
       .property-top__wrap-text
@@ -9,3 +9,89 @@ section.indent-top-menu
       .property-top__wrap-like
         a(href="#").property-top__like
           +svgMono('heart')
+
+section.property-line-b
+  .container
+    ul.property-list-top
+      li.property-list-top__text
+        b.property-list-top__b 1 Bedroom 
+        = '$999 – 1,300'
+      li.property-list-top__text
+        b.property-list-top__b 2 Bedrooms 
+        = '$1,375 – 1,815'
+      li.property-list-top__text
+        b.property-list-top__b 3 Bedroom 
+        = '$1,820 – 1,965'
+
+section
+  .container
+    .wrap-main-section
+      .wrap-main-section__left
+        ul.property-breadcrumbs
+          li Home
+          li Texas
+          li Houston
+          li The Pointe at West Lake
+        .shift-to-the-l.temp-height
+          .swiper-container(js-slider)
+            .swiper-wrapper
+              .swiper-slide
+                span 123
+              .swiper-slide
+                span 123
+              .swiper-slide
+                span 123
+              .swiper-slide
+                span 123
+              .swiper-slide
+                span 123
+              .swiper-slide
+                span 123
+            .swiper-pagination
+            .swiper-button-next
+            .swiper-button-prev
+        ul.property_tab-link
+          li 
+            a(href="#") All
+          li 
+            a(href="#") Studio
+          li 
+            a(href="#") 1 Bed
+          li 
+            a(href="#") 2 Beds
+          li 
+            a(href="#") 3 Beds
+
+
+      .wrap-main-section__right
+        .shift-to-the-r-t
+          form.check-availability
+            .check-availability__title Check Availability
+            .check-availability__wrap
+              .check-availability__row
+                .check-availability__col-6
+                  .ui-group
+                    input(type="text" placeholder="First Name*" required).ui-input
+                .check-availability__col-6
+                  .ui-group
+                    input(type="text" placeholder="Last Name*" required).ui-input
+                .check-availability__col
+                  .ui-group
+                    input(type="text" placeholder="Email id*" required).ui-input
+                .check-availability__col
+                  .ui-group
+                    input(type="text" placeholder="Phone").ui-input
+                .check-availability__col-6
+                  .ui-group
+                    input(type="text" placeholder="Date" js-date js-dateMask).ui-input.check-availability__bg-ico
+                .check-availability__col-6
+                  .ui-group
+                    select(js-select)
+                      option(value="0") Lease Term
+                      option(value="1") Lease Term 1
+                      option(value="2") Lease Term 2
+                      option(value="3") Lease Term 3
+                      option(value="4") Lease Term 4
+                      option(value="5") Lease Term 5
+                .check-availability__col.check-availability__center
+                  button(type="submit").check-availability__button GET QUOTE NOW

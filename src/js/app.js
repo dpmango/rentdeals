@@ -70,6 +70,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Validations.init();
       APP.Plugins.InputFocuses.init();
       APP.Plugins.ResponsivePlaceholder.init();
+      APP.Plugins.Сalendar.init();
     };
 
     // All components from `src/componenets`

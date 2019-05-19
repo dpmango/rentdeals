@@ -15,6 +15,7 @@
     "deploy": "gulp build --production && surge --project ./dist --domain rentdeals.surge.sh"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "barba.js": "^1.0.0",
     "gsap": "^2.0.2",
     "jquery": "^3.4.1",

@@ -14,6 +14,8 @@ import TweenMax from 'gsap/TweenMax';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
+import air_datepicker from 'air-datepicker';
+import datepicker_en from 'air-datepicker/src/js/i18n/datepicker.en.js';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -34,3 +36,4 @@ window.ScrollToPlugin = ScrollToPlugin;
 window.TweenMax = TweenMax;
 window.debounce = debounce;
 window.throttle = throttle;
+window.Сalendar = air_datepicker;
