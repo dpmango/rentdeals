@@ -41,7 +41,9 @@
           $self.siblings().removeClass('is-active');
           $self.addClass('is-active');
           // $(".top10__tab").removeClass("is-active");
-          $('.popup__tab')
+          $self
+            .closest('.popup__inner')
+            .find('.popup__tab')
             .removeClass('is-active')
             .css('display', 'none')
             .eq(tabIndex)
