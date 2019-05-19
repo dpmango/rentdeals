@@ -181,5 +181,56 @@
         &:hover
           opacity: 0.85
 
+  &__getQuote
+    background: #fff
+
+    & + .mfp-close
+      display: none !important
+
+    &-logo
+      padding: 25px
+      background: $colorPrimary
+      text-align: center
+      i
+        font-size: 35px
+
+    &-wrap
+      padding: 40px
+
+    &-grid
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+    &-item
+      width: 48%
+      &--full
+        width: 100%
+      &--center
+        text-align: center
+        width: 100%
+
+      .selectric .label
+        height: 50px
+      .ui-input
+        padding-left: 15px
+        padding-right: 15px
+    &-button
+      background-color: #ED1D25
+      font-weight: 800
+      color: #fff
+      border-radius: 2px
+      padding: 12px 24px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 18px
+      line-height: 1
+      font-family: $baseFont
+      .ico
+        margin-right: 15px
+        color: #fff
+
 
 +r($sm)

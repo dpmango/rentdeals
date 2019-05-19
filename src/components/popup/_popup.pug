@@ -11,7 +11,7 @@
       .popup__tab.is-active
         form(action='#')
           .ui-group
-            input.ui-input(type='text', placeholder='Email / Username 1')
+            input.ui-input(type='text', placeholder='Email / Username')
           .ui-group
             input.ui-input(type='text', placeholder='Password')
           a.popup__forgot(href='#') Forgot Password?
@@ -30,7 +30,7 @@
       .popup__tab
         form(action='#')
           .ui-group
-            input.ui-input(type='text', placeholder='Email / Username 11')
+            input.ui-input(type='text', placeholder='Email / Username')
           .ui-group
             input.ui-input(type='text', placeholder='Password')
           a.popup__forgot(href='#') Forgot Password?
@@ -49,7 +49,7 @@
       .popup__tab
         form(action='#')
           .ui-group
-            input.ui-input(type='text', placeholder='Email / Username 111')
+            input.ui-input(type='text', placeholder='Email / Username')
           .ui-group
             input.ui-input(type='text', placeholder='Password')
           a.popup__forgot(href='#') Forgot Password?
@@ -76,7 +76,7 @@
       .popup__tab.is-active
         form(action='#')
           .ui-group
-            input.ui-input(type='text', placeholder='First Name* 2' required)
+            input.ui-input(type='text', placeholder='First Name*' required)
           .ui-group
             input.ui-input(type='text', placeholder='Last Name*' required)
           .ui-group
@@ -99,7 +99,7 @@
       .popup__tab
         form(action='#')
           .ui-group
-            input.ui-input(type='text', placeholder='First Name* 22' required)
+            input.ui-input(type='text', placeholder='First Name*' required)
           .ui-group
             input.ui-input(type='text', placeholder='Last Name*' required)
           .ui-group
@@ -122,7 +122,7 @@
       .popup__tab
         form(action='#')
           .ui-group
-            input.ui-input(type='text', placeholder='First Name* 222' required)
+            input.ui-input(type='text', placeholder='First Name*' required)
           .ui-group
             input.ui-input(type='text', placeholder='Last Name*' required)
           .ui-group
@@ -141,5 +141,43 @@
                 +svgMono('social-facebook')
               a(href="#")
                 +svgColor('google-plus')
+
+#getQuote.popup.mfp-with-anim.mfp-hide
+  .popup__getQuote
+    form(action="#")
+      .popup__getQuote-logo
+        i.icon.icon-logo
+      .popup__getQuote-wrap
+        .popup__getQuote-grid
+          .popup__getQuote-item
+            .ui-group
+              input.ui-input(type="text" placeholder="First Name*" required)
+          .popup__getQuote-item
+            .ui-group
+              input.ui-input(type="text" placeholder="Last Name*" required)
+          .popup__getQuote-item.popup__getQuote-item--full
+            .ui-group
+              input.ui-input(type="text" placeholder="Email id*" required)
+          .popup__getQuote-item.popup__getQuote-item--full
+            .ui-group
+              input.ui-input(type="text" placeholder="Phone")
+          .popup__getQuote-item
+            .ui-group
+              input(type="text" placeholder="Date" js-date js-dateMask).ui-input.check-availability__bg-ico
+          .popup__getQuote-item
+            .ui-group
+              select(js-select)
+                option(value="0") Lease Term
+                option(value="1") Lease Term 1
+                option(value="2") Lease Term 2
+                option(value="3") Lease Term 3
+                option(value="4") Lease Term 4
+                option(value="5") Lease Term 5
+          .popup__getQuote-item.popup__getQuote-item--center
+            button(type="submit").popup__getQuote-button
+              +svgMono('mail-result')
+              | Get Quote
+
+
 
 // POPUPS :: END
